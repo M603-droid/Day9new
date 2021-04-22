@@ -22,7 +22,7 @@
     <div id="bingo">
         
     </div>
-    <input type="button" value="Random number" onclick="clickMe()">
+            <input type="button" value="Random number" onclick="clickMe()">
 
         <script>
             let numberblocks = [] ;
@@ -82,14 +82,15 @@
         
             let random = Math.floor(Math.random() * 76)
             showBlock(random)
+
         }
 
         const showBlock = function (index) {
+            console.log(index)
 
-let blockToShow = numberblocks[index]; // it will be appointments[0]
-document.getElementsByClassName("squareBlock").innerText == blockToShow
-document.getElementById()
-document.getElementsByClassName("squareBlock").style.display = "block";
+//let blockToShow = numberblocks[index]; 
+//document.getElementById()
+//document.getElementsByClassName("squareBlock").style.display = "block";
 
 };
         
