@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo</title>
+    <link
+
+      rel="stylesheet"
+
+      href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+
+    />
+
+    <link rel="stylesheet" type="text/css" href="stylebingo.css" />
+
+    <style></style>
+</head>
+<body>
+    
+    <div id="bingo">
+        
+    </div>
+    <input type="button" value="Random number" onclick="clickMe()">
+
+        <script>
+            let numberblocks = [] ;
+
+            window.onload = function () {
+            let bingo = document.getElementById("bingo");
+
+            let numberOfBlocks = 80;
+            let checkAlphabet;
+            let numbers = 0;
+            for (let i = 0; i < numberOfBlocks; i++) {
+
+
+            let cell = document.createElement("div");
+            cell.classList.add("squareBlock");
+            let number = document.createElement("h3");
+            switch(i){
+                case 0:
+                number.innerText = 'B';
+                checkAlphabet = true;
+                break;
+                case 16:
+                number.innerText = 'I';
+                checkAlphabet = true;
+                break;
+                case 32:
+                number.innerText = 'N';
+                checkAlphabet = true;
+                break;
+                case 48:
+                number.innerText = 'G';
+                checkAlphabet = true;
+                break;
+                case 64:
+                number.innerText = 'O';
+                checkAlphabet = true;
+                break;
+                default:
+                    checkAlphabet = false;
+                
+            
+            }
+
+            
+                    if(!checkAlphabet) {
+                        number.innerText = numbers+1;
+                        numberblocks.push(numbers)
+                        numbers ++;
+                    }
+            cell.appendChild(number)
+            bingo.appendChild(cell)
+
+            }
+        }
+
+        const clickMe = function(){
+        
+            let random = Math.floor(Math.random() * 76)
+            showBlock(random)
+        }
+
+        const showBlock = function (index) {
+
+let blockToShow = numberblocks[index]; // it will be appointments[0]
+document.getElementsByClassName("squareBlock").innerText == blockToShow
+document.getElementById()
+document.getElementsByClassName("squareBlock").style.display = "block";
+
+};
+        
+        </script>
+        
+       
+            
+
+    
+</body>
+</html>
